@@ -1,15 +1,9 @@
-function fn(number) {
-    return number * 2;
-  }
+function print(callback) {
+  const result = callback(1);
+  console.log(callback(2));
+  return result;
+}
+
+const fn = (num) => num * 2;
+print(fn);
   
-  console.log(fn(2));
-  console.log(fn(4));
-  
-  const fnArrow = number => {
-    console.log(number);
-    return number * 2;
-  };
-  
-  const fnArrowObj = number => ({ result: number * 2 })
-  
-  console.log(fnArrowObj(2));
